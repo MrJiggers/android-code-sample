@@ -1,4 +1,4 @@
-# Sample project – SpaceX
+# Sample Android project – SpaceX
 
 
 ---
