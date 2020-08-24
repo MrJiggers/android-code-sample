@@ -1,7 +1,5 @@
 # Sample Android project – SpaceX
 
-
----
 ## Sources
 ### API
 https://github.com/r-spacex/SpaceX-API
