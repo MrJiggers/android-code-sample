@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:attrs="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:fitsSystemWindows="true">
+
+	<com.google.android.material.appbar.AppBarLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:elevation="0dp">
+
+		<com.google.android.material.appbar.CollapsingToolbarLayout
+			android:id="@+id/detailCollapsingToolbar"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:fitsSystemWindows="true"
+			app:contentScrim="?attr/colorPrimary"
+			app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+			<androidx.constraintlayout.widget.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+				<androidx.viewpager.widget.ViewPager
+					android:id="@+id/detailPhotosViewPager"
+					android:layout_width="match_parent"
+					android:layout_height="220dp"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent" />
+
+				<com.rd.PageIndicatorView
+					android:id="@+id/detailIndicatorView"
+					android:layout_width="wrap_content"
+					android:layout_height="0dp"
+					android:layout_marginBottom="8dp"
+					android:paddingBottom="16dp"
+					app:layout_constraintBottom_toBottomOf="@id/detailPhotosViewPager"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:piv_animationType="worm"
+					app:piv_interactiveAnimation="true"
+					app:piv_scaleFactor="10"
+					app:piv_selectedColor="@color/pageIndicatorSelectedColor"
+					app:piv_unselectedColor="@color/pageIndicatorDefaultColor"
+					app:piv_viewPager="@id/detailPhotosViewPager"
+					attrs:piv_padding="8dp"
+					attrs:piv_radius="4dp" />
+			</androidx.constraintlayout.widget.ConstraintLayout>
+
+			<com.google.android.material.appbar.MaterialToolbar
+				android:id="@+id/detailToolbar"
+				android:layout_width="match_parent"
+				android:layout_height="?attr/actionBarSize"
+				app:layout_collapseMode="pin"
+				app:navigationIcon="@drawable/ic_arrow_back_24px" />
+		</com.google.android.material.appbar.CollapsingToolbarLayout>
+	</com.google.android.material.appbar.AppBarLayout>
+
+	<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+		android:id="@+id/detailRefresh"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+		<androidx.core.widget.NestedScrollView
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:fillViewport="true">
+
+			<androidx.constraintlayout.widget.ConstraintLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content">
+
+				<TextView
+					android:id="@+id/detailTitle"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="16dp"
+					android:layout_marginTop="24dp"
+					android:textAllCaps="true"
+					android:textColor="@color/titleColor"
+					android:textSize="24sp"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toTopOf="parent"
+					tools:text="Rocket name" />
+
+				<TextView
+					android:id="@+id/detailDescription"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginStart="16dp"
+					android:layout_marginTop="16dp"
+					android:layout_marginEnd="16dp"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@id/detailTitle"
+					tools:text="Description" />
+
+				<View
+					android:id="@+id/detailDivider"
+					android:layout_width="0dp"
+					android:layout_height="1dp"
+					android:layout_marginStart="16dp"
+					android:layout_marginTop="16dp"
+					android:layout_marginEnd="16dp"
+					android:background="@color/dividerColor"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@id/detailDescription" />
+
+				<View
+					android:id="@+id/detailHeightBackground"
+					android:layout_width="90dp"
+					android:layout_height="90dp"
+					android:layout_marginTop="16dp"
+					android:background="@drawable/background_detail_parameter"
+					app:layout_constraintEnd_toStartOf="@id/detailDiameterBackground"
+					app:layout_constraintStart_toStartOf="parent"
+					app:layout_constraintTop_toBottomOf="@id/detailDivider" />
+
+				<TextView
+					android:id="@+id/detailHeightText"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:textSize="18sp"
+					app:layout_constraintBottom_toBottomOf="@id/detailHeightBackground"
+					app:layout_constraintEnd_toEndOf="@id/detailHeightBackground"
+					app:layout_constraintStart_toStartOf="@id/detailHeightBackground"
+					app:layout_constraintTop_toTopOf="@id/detailHeightBackground"
+					tools:text="24" />
+
+				<TextView
+					android:id="@+id/detailHeightTitle"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="12dp"
+					android:gravity="center"
+					android:text="@string/detail_height"
+					android:textSize="18sp"
+					app:layout_constraintEnd_toEndOf="@id/detailHeightBackground"
+					app:layout_constraintStart_toStartOf="@id/detailHeightBackground"
+					app:layout_constraintTop_toBottomOf="@id/detailHeightBackground" />
+
+				<View
+					android:id="@+id/detailDiameterBackground"
+					android:layout_width="90dp"
+					android:layout_height="90dp"
+					android:layout_marginTop="16dp"
+					android:background="@drawable/background_detail_parameter"
+					app:layout_constraintEnd_toStartOf="@id/detailMassBackground"
+					app:layout_constraintStart_toEndOf="@id/detailHeightBackground"
+					app:layout_constraintTop_toBottomOf="@id/detailDivider" />
+
+				<TextView
+					android:id="@+id/detailDiameterText"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:textSize="18sp"
+					app:layout_constraintBottom_toBottomOf="@id/detailDiameterBackground"
+					app:layout_constraintEnd_toEndOf="@id/detailDiameterBackground"
+					app:layout_constraintStart_toStartOf="@id/detailDiameterBackground"
+					app:layout_constraintTop_toTopOf="@id/detailDiameterBackground"
+					tools:text="24" />
+
+				<TextView
+					android:id="@+id/detailDiameterTitle"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="12dp"
+					android:gravity="center"
+					android:text="@string/detail_diameter"
+					android:textSize="18sp"
+					app:layout_constraintEnd_toEndOf="@id/detailDiameterBackground"
+					app:layout_constraintStart_toStartOf="@id/detailDiameterBackground"
+					app:layout_constraintTop_toBottomOf="@id/detailDiameterBackground" />
+
+				<View
+					android:id="@+id/detailMassBackground"
+					android:layout_width="90dp"
+					android:layout_height="90dp"
+					android:layout_marginTop="16dp"
+					android:background="@drawable/background_detail_parameter"
+					app:layout_constraintEnd_toEndOf="parent"
+					app:layout_constraintStart_toEndOf="@id/detailDiameterBackground"
+					app:layout_constraintTop_toBottomOf="@id/detailDivider" />
+
+				<TextView
+					android:id="@+id/detailMassText"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:gravity="center"
+					android:textSize="18sp"
+					app:layout_constraintBottom_toBottomOf="@id/detailMassBackground"
+					app:layout_constraintEnd_toEndOf="@id/detailMassBackground"
+					app:layout_constraintStart_toStartOf="@id/detailMassBackground"
+					app:layout_constraintTop_toTopOf="@id/detailMassBackground"
+					tools:text="24" />
+
+				<TextView
+					android:id="@+id/detailMassTitle"
+					android:layout_width="0dp"
+					android:layout_height="wrap_content"
+					android:layout_marginTop="12dp"
+					android:gravity="center"
+					android:text="@string/detail_mass"
+					android:textSize="18sp"
+					app:layout_constraintEnd_toEndOf="@id/detailMassBackground"
+					app:layout_constraintStart_toStartOf="@id/detailMassBackground"
+					app:layout_constraintTop_toBottomOf="@id/detailMassBackground" />
+			</androidx.constraintlayout.widget.ConstraintLayout>
+		</androidx.core.widget.NestedScrollView>
+	</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

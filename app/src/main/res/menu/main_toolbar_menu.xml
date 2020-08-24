@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto">
+	<item
+		android:id="@+id/mainFilter"
+		android:icon="@drawable/ic_filter_alt_black_36dp_inactive"
+		android:title="@string/main_menu_filter"
+		app:showAsAction="ifRoom" />
+
+	<item
+		android:id="@+id/mainOpenDrawer"
+		android:icon="@drawable/ic_menu_black_36dp"
+		android:title="@string/main_menu_description"
+		app:showAsAction="ifRoom" />
+</menu>

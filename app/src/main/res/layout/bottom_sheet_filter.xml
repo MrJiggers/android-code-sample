@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="wrap_content">
+
+	<View
+		android:id="@+id/handle"
+		android:layout_width="32dp"
+		android:layout_height="4dp"
+		android:layout_marginTop="6dp"
+		android:background="@drawable/background_bottom_sheet_handle"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<TextView
+		android:id="@+id/filterTitle"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginEnd="16dp"
+		android:layout_marginBottom="12dp"
+		android:paddingTop="18dp"
+		android:text="@string/filter_title"
+		android:textColor="@color/titleColor"
+		android:textSize="22sp"
+		app:layout_constraintEnd_toStartOf="@id/close"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/handle" />
+
+	<ImageView
+		android:id="@+id/close"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="16dp"
+		android:background="?attr/selectableItemBackgroundBorderless"
+		android:clickable="true"
+		android:contentDescription="@null"
+		android:focusable="true"
+		android:src="@drawable/ic_close_button"
+		app:layout_constraintBottom_toBottomOf="@id/filterTitle"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="@id/filterTitle" />
+
+	<TextView
+		android:id="@+id/filterActiveRocketTitle"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="28dp"
+		android:layout_marginEnd="16dp"
+		android:text="@string/filter_rocket_active_title"
+		android:textSize="18sp"
+		app:layout_constraintEnd_toStartOf="@id/filterActiveRocket"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/filterTitle" />
+
+	<com.google.android.material.switchmaterial.SwitchMaterial
+		android:id="@+id/filterActiveRocket"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginEnd="16dp"
+		app:layout_constraintBottom_toBottomOf="@id/filterActiveRocketTitle"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintTop_toTopOf="@id/filterActiveRocketTitle" />
+
+	<TextView
+		android:id="@+id/filterSuccessRateTitle"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="16dp"
+		android:layout_marginEnd="16dp"
+		android:text="@string/filter_rocket_success_ratio"
+		android:textSize="18sp"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/filterActiveRocket" />
+
+	<SeekBar
+		android:id="@+id/filterSuccessRate"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="12dp"
+		android:layout_marginEnd="24dp"
+		app:layout_constraintEnd_toStartOf="@id/filterSuccessRateValue"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/filterSuccessRateTitle" />
+
+	<TextView
+		android:id="@+id/filterSuccessRateValue"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginEnd="16dp"
+		android:gravity="center"
+		android:textSize="18sp"
+		app:layout_constraintBottom_toBottomOf="@id/filterSuccessRate"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toEndOf="@id/filterSuccessRate"
+		app:layout_constraintTop_toTopOf="@id/filterSuccessRate"
+		tools:text="90" />
+
+	<com.google.android.material.button.MaterialButton
+		android:id="@+id/filterClearAction"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="16dp"
+		android:layout_marginTop="24dp"
+		android:layout_marginEnd="8dp"
+		android:layout_marginBottom="16dp"
+		android:text="@string/filter_action_button_clear"
+		android:textColor="@android:color/white"
+		app:backgroundTint="@color/colorDanger"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toStartOf="@id/filterAction"
+		app:layout_constraintStart_toStartOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/filterSuccessRate" />
+
+	<com.google.android.material.button.MaterialButton
+		android:id="@+id/filterAction"
+		android:layout_width="0dp"
+		android:layout_height="wrap_content"
+		android:layout_marginStart="8dp"
+		android:layout_marginTop="24dp"
+		android:layout_marginEnd="16dp"
+		android:layout_marginBottom="16dp"
+		android:text="@string/filter_action_button"
+		android:textColor="@android:color/white"
+		app:backgroundTint="@color/colorAccent"
+		app:layout_constraintBottom_toBottomOf="parent"
+		app:layout_constraintEnd_toEndOf="parent"
+		app:layout_constraintStart_toEndOf="@id/filterClearAction"
+		app:layout_constraintTop_toBottomOf="@id/filterSuccessRate" />
+</androidx.constraintlayout.widget.ConstraintLayout>

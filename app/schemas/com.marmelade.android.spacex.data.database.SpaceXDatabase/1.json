@@ -1,0 +1,504 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 1,
+    "identityHash": "55f21c03353a4b508bbdd4a89bf09298",
+    "entities": [
+      {
+        "tableName": "Rocket",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `payloadWeights` TEXT, `flickrImages` TEXT, `name` TEXT, `type` TEXT, `active` INTEGER, `stages` INTEGER, `boosters` INTEGER, `costPerLaunch` INTEGER, `successRatePct` INTEGER, `firstFlight` TEXT, `country` TEXT, `company` TEXT, `wikipedia` TEXT, `description` TEXT, `height_meters` REAL, `height_feet` REAL, `diameter_meters` REAL, `diameter_feet` REAL, `mass_kg` INTEGER, `mass_lb` INTEGER, `first_stage_reusable` INTEGER, `first_stage_engines` INTEGER, `first_stage_fuelAmountTons` REAL, `first_stage_burnTimeSec` REAL, `first_stage_thrust_seaLevel_kN` INTEGER, `first_stage_thrust_seaLevel_lbf` INTEGER, `first_stage_thrust_vacuum_kN` INTEGER, `first_stage_thrust_vacuum_lbf` INTEGER, `second_stage_reusable` INTEGER, `second_stage_engines` INTEGER, `second_stage_fuelAmountTons` REAL, `second_stage_burnTimeSec` REAL, `second_stage_thrust_kN` INTEGER, `second_stage_thrust_lbf` INTEGER, `second_stage_payloads_option1` TEXT, `second_stage_payloads_compositeFairing_height_meters` REAL, `second_stage_payloads_compositeFairing_height_feet` REAL, `second_stage_payloads_compositeFairing_diameter_meters` REAL, `second_stage_payloads_compositeFairing_diameter_feet` REAL, `engines_number` INTEGER, `engines_type` TEXT, `engines_version` TEXT, `engines_layout` TEXT, `engines_engineLossMax` INTEGER, `engines_propellant1` TEXT, `engines_propellant2` TEXT, `engines_thrustToWeight` REAL, `engines_isp_seaLevel` INTEGER, `engines_isp_vacuum` INTEGER, `engines_thrust_seaLevel_kN` INTEGER, `engines_thrust_seaLevel_lbf` INTEGER, `engines_thrust_vacuum_kN` INTEGER, `engines_thrust_vacuum_lbf` INTEGER, `landing_legs_number` INTEGER, `landing_legs_material` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "payloadWeights",
+            "columnName": "payloadWeights",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "flickrImages",
+            "columnName": "flickrImages",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "type",
+            "columnName": "type",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "active",
+            "columnName": "active",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "stages",
+            "columnName": "stages",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "boosters",
+            "columnName": "boosters",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "costPerLaunch",
+            "columnName": "costPerLaunch",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "successRatePct",
+            "columnName": "successRatePct",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "firstFlight",
+            "columnName": "firstFlight",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "country",
+            "columnName": "country",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "company",
+            "columnName": "company",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "wikipedia",
+            "columnName": "wikipedia",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "description",
+            "columnName": "description",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "height.meters",
+            "columnName": "height_meters",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "height.feet",
+            "columnName": "height_feet",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "diameter.meters",
+            "columnName": "diameter_meters",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "diameter.feet",
+            "columnName": "diameter_feet",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mass.kg",
+            "columnName": "mass_kg",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "mass.lb",
+            "columnName": "mass_lb",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "firstStage.reusable",
+            "columnName": "first_stage_reusable",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "firstStage.engines",
+            "columnName": "first_stage_engines",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "firstStage.fuelAmountTons",
+            "columnName": "first_stage_fuelAmountTons",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "firstStage.burnTimeSec",
+            "columnName": "first_stage_burnTimeSec",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "firstStage.thrustSeaLevel.kN",
+            "columnName": "first_stage_thrust_seaLevel_kN",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "firstStage.thrustSeaLevel.lbf",
+            "columnName": "first_stage_thrust_seaLevel_lbf",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "firstStage.thrustVacuum.kN",
+            "columnName": "first_stage_thrust_vacuum_kN",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "firstStage.thrustVacuum.lbf",
+            "columnName": "first_stage_thrust_vacuum_lbf",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "secondStage.reusable",
+            "columnName": "second_stage_reusable",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "secondStage.engines",
+            "columnName": "second_stage_engines",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "secondStage.fuelAmountTons",
+            "columnName": "second_stage_fuelAmountTons",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "secondStage.burnTimeSec",
+            "columnName": "second_stage_burnTimeSec",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "secondStage.thrust.kN",
+            "columnName": "second_stage_thrust_kN",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "secondStage.thrust.lbf",
+            "columnName": "second_stage_thrust_lbf",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "secondStage.payloads.option1",
+            "columnName": "second_stage_payloads_option1",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "secondStage.payloads.compositeFairing.height.meters",
+            "columnName": "second_stage_payloads_compositeFairing_height_meters",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "secondStage.payloads.compositeFairing.height.feet",
+            "columnName": "second_stage_payloads_compositeFairing_height_feet",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "secondStage.payloads.compositeFairing.diameter.meters",
+            "columnName": "second_stage_payloads_compositeFairing_diameter_meters",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "secondStage.payloads.compositeFairing.diameter.feet",
+            "columnName": "second_stage_payloads_compositeFairing_diameter_feet",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "engines.number",
+            "columnName": "engines_number",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "engines.type",
+            "columnName": "engines_type",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "engines.version",
+            "columnName": "engines_version",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "engines.layout",
+            "columnName": "engines_layout",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "engines.engineLossMax",
+            "columnName": "engines_engineLossMax",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "engines.propellant1",
+            "columnName": "engines_propellant1",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "engines.propellant2",
+            "columnName": "engines_propellant2",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "engines.thrustToWeight",
+            "columnName": "engines_thrustToWeight",
+            "affinity": "REAL",
+            "notNull": false
+          },
+          {
+            "fieldPath": "engines.isp.seaLevel",
+            "columnName": "engines_isp_seaLevel",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "engines.isp.vacuum",
+            "columnName": "engines_isp_vacuum",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "engines.thrustSeaLevel.kN",
+            "columnName": "engines_thrust_seaLevel_kN",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "engines.thrustSeaLevel.lbf",
+            "columnName": "engines_thrust_seaLevel_lbf",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "engines.thrustVacuum.kN",
+            "columnName": "engines_thrust_vacuum_kN",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "engines.thrustVacuum.lbf",
+            "columnName": "engines_thrust_vacuum_lbf",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "landingLegs.number",
+            "columnName": "landing_legs_number",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "landingLegs.material",
+            "columnName": "landing_legs_material",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      },
+      {
+        "tableName": "Company",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`id` TEXT NOT NULL, `name` TEXT, `founder` TEXT, `founded` INTEGER, `employees` INTEGER, `vehicles` INTEGER, `launchSites` INTEGER, `testSites` INTEGER, `ceo` TEXT, `cto` TEXT, `coo` TEXT, `ctoPropulsion` TEXT, `valuation` INTEGER, `summary` TEXT, `headquarters_address` TEXT, `headquarters_city` TEXT, `headquarters_state` TEXT, `links_website` TEXT, `links_flickr` TEXT, `links_twitter` TEXT, `links_elonTwitter` TEXT, PRIMARY KEY(`id`))",
+        "fields": [
+          {
+            "fieldPath": "id",
+            "columnName": "id",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "name",
+            "columnName": "name",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "founder",
+            "columnName": "founder",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "founded",
+            "columnName": "founded",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "employees",
+            "columnName": "employees",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "vehicles",
+            "columnName": "vehicles",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "launchSites",
+            "columnName": "launchSites",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "testSites",
+            "columnName": "testSites",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ceo",
+            "columnName": "ceo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "cto",
+            "columnName": "cto",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "coo",
+            "columnName": "coo",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "ctoPropulsion",
+            "columnName": "ctoPropulsion",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "valuation",
+            "columnName": "valuation",
+            "affinity": "INTEGER",
+            "notNull": false
+          },
+          {
+            "fieldPath": "summary",
+            "columnName": "summary",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "headquarters.address",
+            "columnName": "headquarters_address",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "headquarters.city",
+            "columnName": "headquarters_city",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "headquarters.state",
+            "columnName": "headquarters_state",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "links.website",
+            "columnName": "links_website",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "links.flickr",
+            "columnName": "links_flickr",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "links.twitter",
+            "columnName": "links_twitter",
+            "affinity": "TEXT",
+            "notNull": false
+          },
+          {
+            "fieldPath": "links.elonTwitter",
+            "columnName": "links_elonTwitter",
+            "affinity": "TEXT",
+            "notNull": false
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "id"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '55f21c03353a4b508bbdd4a89bf09298')"
+    ]
+  }
+}

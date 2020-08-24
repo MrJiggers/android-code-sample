@@ -1,0 +1,26 @@
+<resources>
+	<!-- Base application theme. -->
+	<style name="SpaceXTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+		<!-- Customize your theme here. -->
+		<item name="colorPrimary">@color/colorPrimary</item>
+		<item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+		<item name="colorAccent">@color/colorAccent</item>
+
+		<item name="fontFamily">@font/bank_gothic_regular</item>
+	</style>
+
+	<!-- Splash theme -->
+	<style name="SplashTheme" parent="SpaceXTheme">
+		<item name="android:windowBackground">@drawable/background_splash</item>
+		<item name="android:windowTranslucentStatus">true</item>
+	</style>
+
+	<!-- Bottom sheet theme -->
+	<style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+		<item name="android:background">@drawable/background_bottom_sheet</item>
+	</style>
+
+	<style name="AppBottomSheetDialogTheme" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+		<item name="bottomSheetStyle">@style/AppModalStyle</item>
+	</style>
+</resources>

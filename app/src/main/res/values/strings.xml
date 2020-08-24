@@ -1,0 +1,33 @@
+<resources>
+	<string name="app_name">SpaceX</string>
+
+	<string name="common_error_title">An error has occurred.</string>
+	<string name="common_error_unauthorized_access">Unauthorized access.</string>
+	<string name="common_error_not_found">Resource not found, try it again later, please.</string>
+	<string name="common_error_server_error">Server error, try it again later, please.</string>
+	<string name="common_error_unknown_error">Unknown error, try it again later, please.</string>
+	<string name="common_error_connection_error">Connection error, try connect to network, please.</string>
+	<string name="common_error_timeout">Request timeout error, try it again later, please.</string>
+	<string name="common_nothing_found">Nothing found</string>
+
+	<string name="detail_loading">loading rockets…</string>
+	<string name="detail_unit_m">%1$s \nm</string>
+	<string name="detail_unit_tones">%1$s \nt</string>
+	<string name="detail_height">Height</string>
+	<string name="detail_diameter">Diameter</string>
+	<string name="detail_mass">Mass</string>
+	<string name="navigation_drawer_open">Open</string>
+	<string name="navigation_drawer_close">Close</string>
+	<string name="main_menu_description">Open menu</string>
+	<string name="menu_item_rockets">rockets 🚀</string>
+	<string name="menu_item_company">company</string>
+	<string name="main_menu_filter">Filter rockets</string>
+	<string name="filter_title">Filter rockets</string>
+	<string name="filter_rocket_active_title">Is rocket active?</string>
+	<string name="filter_rocket_success_ratio">Succeed ratio</string>
+	<string name="filter_action_button">apply filter</string>
+	<string name="filter_action_button_clear">clear filter</string>
+	<string name="row_rocket_image_description">Rocket image</string>
+	<string name="detail_rocket_image_description">Rocket image</string>
+	<string name="main_image_description_logo">SpaceX logo</string>
+</resources>
