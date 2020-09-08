@@ -13,7 +13,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.bumptech.glide.request.RequestOptions
 import com.marmelade.android.spacex.R
-import com.marmelade.android.spacex.data.base.BaseFragment
+import com.marmelade.android.spacex.ui.base.BaseFragment
 import com.marmelade.android.spacex.data.entities.ErrorStatus
 import com.marmelade.android.spacex.data.entities.LoadingStatus
 import com.marmelade.android.spacex.data.entities.SuccessStatus

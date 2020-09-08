@@ -1,4 +1,4 @@
-package com.marmelade.android.spacex.data.base
+package com.marmelade.android.spacex.ui.base
 
 import android.content.Context
 import com.marmelade.android.spacex.R

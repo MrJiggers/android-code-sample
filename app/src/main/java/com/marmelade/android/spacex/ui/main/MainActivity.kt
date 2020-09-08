@@ -11,13 +11,13 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.content.ContextCompat
 import androidx.core.view.GravityCompat
 import com.marmelade.android.spacex.R
-import com.marmelade.android.spacex.data.base.BaseActivity
+import com.marmelade.android.spacex.ui.base.BaseActivity
 import com.marmelade.android.spacex.databinding.ActivityMainBinding
 import com.marmelade.android.spacex.ui.company.CompanyFragment
 import com.marmelade.android.spacex.ui.rockets.RocketsFragment
 
 
-class MainActivity : BaseActivity<ActivityMainBinding, MainActivityViewModel>() {
+class MainActivity : BaseActivity<MainActivityViewModel, ActivityMainBinding>() {
     companion object {
         fun getStartIntent(context: Context): Intent = Intent(context, MainActivity::class.java)
     }

@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.marmelade.android.spacex.data.base.BaseFragment
+import com.marmelade.android.spacex.ui.base.BaseFragment
 import com.marmelade.android.spacex.data.entities.company.Company
 import com.marmelade.android.spacex.databinding.FragmentCompanyBinding
 
