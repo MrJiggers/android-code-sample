@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import com.marmelade.android.spacex.BuildConfig
 import com.marmelade.android.spacex.R
-import com.marmelade.android.spacex.data.base.BaseActivity
+import com.marmelade.android.spacex.ui.base.BaseActivity
 import com.marmelade.android.spacex.data.entities.ErrorStatus
 import com.marmelade.android.spacex.data.entities.rocket.Rocket
 import com.marmelade.android.spacex.databinding.ActivityDetailBinding
@@ -19,7 +19,7 @@ import java.text.DecimalFormatSymbols
 /**
  * Activity for rocket detail
  */
-class DetailActivity : BaseActivity<ActivityDetailBinding, DetailViewModel>() {
+class DetailActivity : BaseActivity<DetailViewModel, ActivityDetailBinding>() {
     companion object {
         fun getStartIntent(context: Context, rocketId: String): Intent {
             return Intent(context, DetailActivity::class.java)

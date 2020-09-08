@@ -1,4 +1,4 @@
-package com.marmelade.android.spacex.data.base
+package com.marmelade.android.spacex.ui.base
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -13,7 +13,7 @@ import javax.inject.Inject
 /**
  * Base parent for activities
  */
-abstract class BaseActivity<T : ViewBinding, V : ViewModel> : DaggerAppCompatActivity() {
+abstract class BaseActivity<V, T> : DaggerAppCompatActivity() where V : ViewModel, T : ViewBinding {
 
     @Inject lateinit var viewModelFactory: ViewModelProvider.Factory
     protected lateinit var viewModel: V

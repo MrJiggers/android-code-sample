@@ -1,4 +1,4 @@
-package com.marmelade.android.spacex.data.base
+package com.marmelade.android.spacex.ui.base
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -15,12 +15,12 @@ import javax.inject.Inject
 /**
  * Base parent for fragments
  */
-abstract class BaseFragment<T, V : ViewBinding> : DaggerFragment() where T : ViewModel {
+abstract class BaseFragment<V, T> : DaggerFragment() where V : ViewModel, T : ViewBinding {
 
     @Inject lateinit var viewModelFactory: ViewModelProvider.Factory
-    protected lateinit var viewModel: T
-    protected abstract val vmClass: Class<T>
-    protected var binding: V? = null
+    protected lateinit var viewModel: V
+    protected abstract val vmClass: Class<V>
+    protected var binding: T? = null
         private set
 
 
@@ -39,9 +39,9 @@ abstract class BaseFragment<T, V : ViewBinding> : DaggerFragment() where T : Vie
     }
 
     override fun onDestroyView() {
-        super.onDestroyView()
         binding = null
+        super.onDestroyView()
     }
 
-    abstract fun setViewBinding(inflater: LayoutInflater, container: ViewGroup?): V
+    abstract fun setViewBinding(inflater: LayoutInflater, container: ViewGroup?): T
 }

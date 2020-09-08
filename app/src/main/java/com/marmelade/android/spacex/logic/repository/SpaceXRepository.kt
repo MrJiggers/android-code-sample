@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.Transformations
-import com.marmelade.android.spacex.data.base.BaseRepository
+import com.marmelade.android.spacex.ui.base.BaseRepository
 import com.marmelade.android.spacex.data.database.SpaceXDatabase
 import com.marmelade.android.spacex.data.entities.Resource
 import com.marmelade.android.spacex.data.entities.RocketFilter
