@@ -6,6 +6,9 @@ import com.squareup.moshi.Moshi
 import com.squareup.moshi.Types
 
 
+/**
+ * @author Petr Tykal <tykal.pete@gmail.com>
+ */
 class DatabaseTypeConverters {
     val moshi: Moshi = Moshi.Builder().build()
 

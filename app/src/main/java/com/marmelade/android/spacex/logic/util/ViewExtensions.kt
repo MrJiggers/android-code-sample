@@ -4,6 +4,9 @@ import android.view.View
 import com.google.android.material.snackbar.Snackbar
 
 
+/**
+ * @author Petr Tykal <tykal.pete@gmail.com>
+ */
 fun View.setVisible(visible: Boolean) {
     if (visible) this.visibility = View.VISIBLE
     else this.visibility = View.GONE

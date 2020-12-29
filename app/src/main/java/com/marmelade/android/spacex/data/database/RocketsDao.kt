@@ -8,6 +8,9 @@ import androidx.room.Query
 import com.marmelade.android.spacex.data.entities.rocket.Rocket
 
 
+/**
+ * @author Petr Tykal <tykal.pete@gmail.com>
+ */
 @Dao
 interface RocketsDao {
 

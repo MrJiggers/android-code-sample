@@ -12,6 +12,8 @@ import javax.inject.Inject
 
 /**
  * Base parent for activities
+ *
+ * @author Petr Tykal <tykal.pete@gmail.com>
  */
 abstract class BaseActivity<V, T> : DaggerAppCompatActivity() where V : ViewModel, T : ViewBinding {
 

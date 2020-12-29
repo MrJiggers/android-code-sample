@@ -8,6 +8,9 @@ import com.marmelade.android.spacex.data.database.DatabaseTypeConverters
 import com.squareup.moshi.Json
 
 
+/**
+ * @author Petr Tykal <tykal.pete@gmail.com>
+ */
 @Entity
 data class Rocket(
         @PrimaryKey val id: String,

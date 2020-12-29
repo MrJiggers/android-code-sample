@@ -18,6 +18,8 @@ import java.text.DecimalFormatSymbols
 
 /**
  * Activity for rocket detail
+ *
+ * @author Petr Tykal <tykal.pete@gmail.com>
  */
 class DetailActivity : BaseActivity<DetailViewModel, ActivityDetailBinding>() {
     companion object {

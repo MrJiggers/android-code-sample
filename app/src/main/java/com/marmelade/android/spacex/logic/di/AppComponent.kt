@@ -8,6 +8,9 @@ import dagger.android.AndroidInjectionModule
 import javax.inject.Singleton
 
 
+/**
+ * @author Petr Tykal <tykal.pete@gmail.com>
+ */
 @Singleton
 @Component(
         modules = [

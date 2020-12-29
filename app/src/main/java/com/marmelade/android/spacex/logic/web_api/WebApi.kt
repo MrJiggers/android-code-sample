@@ -8,6 +8,9 @@ import retrofit2.http.GET
 import retrofit2.http.Path
 
 
+/**
+ * @author Petr Tykal <tykal.pete@gmail.com>
+ */
 interface WebApi {
 
     @GET("company")

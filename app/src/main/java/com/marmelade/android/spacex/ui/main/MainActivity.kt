@@ -17,6 +17,9 @@ import com.marmelade.android.spacex.ui.company.CompanyFragment
 import com.marmelade.android.spacex.ui.rockets.RocketsFragment
 
 
+/**
+ * @author Petr Tykal <tykal.pete@gmail.com>
+ */
 class MainActivity : BaseActivity<MainActivityViewModel, ActivityMainBinding>() {
     companion object {
         fun getStartIntent(context: Context): Intent = Intent(context, MainActivity::class.java)
@@ -96,6 +99,7 @@ class MainActivity : BaseActivity<MainActivityViewModel, ActivityMainBinding>() 
         binding?.mainContentPlaceholder?.id?.let {
             supportFragmentManager
                     .beginTransaction()
+                    .setCustomAnimations(R.anim.fade_in_fragment, R.anim.fade_out_fragment)
                     .replace(it, fragment)
                     .commit()
         }

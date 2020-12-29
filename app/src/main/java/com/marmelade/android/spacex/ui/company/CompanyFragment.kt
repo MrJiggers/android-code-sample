@@ -11,6 +11,8 @@ import com.marmelade.android.spacex.databinding.FragmentCompanyBinding
 
 /**
  * Fragment for information about SpaceX company
+ *
+ * @author Petr Tykal <tykal.pete@gmail.com>
  */
 class CompanyFragment : BaseFragment<CompanyViewModel, FragmentCompanyBinding>() {
     companion object {

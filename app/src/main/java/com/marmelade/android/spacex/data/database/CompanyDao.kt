@@ -8,6 +8,9 @@ import androidx.room.Query
 import com.marmelade.android.spacex.data.entities.company.Company
 
 
+/**
+ * @author Petr Tykal <tykal.pete@gmail.com>
+ */
 @Dao
 interface CompanyDao {
 

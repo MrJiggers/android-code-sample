@@ -7,13 +7,16 @@ import com.marmelade.android.spacex.data.entities.company.Company
 import com.marmelade.android.spacex.data.entities.rocket.Rocket
 
 
+/**
+ * @author Petr Tykal <tykal.pete@gmail.com>
+ */
 @Database(
-    entities = [
-        Rocket::class,
-        Company::class
-    ],
-    version = 1,
-    exportSchema = true
+        entities = [
+            Rocket::class,
+            Company::class
+        ],
+        version = 1,
+        exportSchema = true
 )
 @TypeConverters(DatabaseTypeConverters::class)
 abstract class SpaceXDatabase : RoomDatabase() {

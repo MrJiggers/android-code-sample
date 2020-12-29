@@ -3,6 +3,8 @@ package com.marmelade.android.spacex.data.entities
 
 /**
  * Wrapper for API responses
+ *
+ * @author Petr Tykal <tykal.pete@gmail.com>
  */
 class Resource<out T> private constructor(
         val status: Status,

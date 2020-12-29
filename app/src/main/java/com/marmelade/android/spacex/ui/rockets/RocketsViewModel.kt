@@ -13,6 +13,9 @@ import timber.log.Timber
 import javax.inject.Inject
 
 
+/**
+ * @author Petr Tykal <tykal.pete@gmail.com>
+ */
 class RocketsViewModel @Inject constructor(
         private val spaceXRepository: SpaceXRepository
 ) : ViewModel() {

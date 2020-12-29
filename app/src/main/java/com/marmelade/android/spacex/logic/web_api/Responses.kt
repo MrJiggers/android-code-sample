@@ -5,6 +5,9 @@ import com.marmelade.android.spacex.R
 import com.marmelade.android.spacex.data.entities.ErrorIdentification
 
 
+/**
+ * @author Petr Tykal <tykal.pete@gmail.com>
+ */
 abstract class BaseResponse(val status: Int, val error: String?) {
     companion object {
         const val CODE_SUCCESS = 200

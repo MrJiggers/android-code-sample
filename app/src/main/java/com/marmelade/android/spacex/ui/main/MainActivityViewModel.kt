@@ -6,6 +6,9 @@ import io.reactivex.disposables.CompositeDisposable
 import javax.inject.Inject
 
 
+/**
+ * @author Petr Tykal <tykal.pete@gmail.com>
+ */
 class MainActivityViewModel @Inject constructor(private val spaceXRepository: SpaceXRepository) : ViewModel() {
 
     private val disposables: CompositeDisposable = CompositeDisposable()
