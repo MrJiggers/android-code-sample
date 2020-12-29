@@ -7,6 +7,9 @@ import javax.inject.Provider
 import javax.inject.Singleton
 
 
+/**
+ * @author Petr Tykal <tykal.pete@gmail.com>
+ */
 @Singleton
 class DaggerViewModelFactory
 @Inject constructor(private val creators: Map<Class<out ViewModel>, @JvmSuppressWildcards Provider<ViewModel>>

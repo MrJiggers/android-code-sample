@@ -7,6 +7,8 @@ import com.marmelade.android.spacex.ui.main.MainActivity
 
 /**
  * Activity for app splash screen
+ *
+ * @author Petr Tykal <tykal.pete@gmail.com>
  */
 class SplashActivity : AppCompatActivity() {
 

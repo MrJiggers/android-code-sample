@@ -6,6 +6,9 @@ import androidx.room.PrimaryKey
 import com.squareup.moshi.Json
 
 
+/**
+ * @author Petr Tykal <tykal.pete@gmail.com>
+ */
 @Entity
 data class Company(
 	@PrimaryKey val id: String,

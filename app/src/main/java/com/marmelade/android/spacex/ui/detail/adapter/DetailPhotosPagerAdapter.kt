@@ -13,6 +13,8 @@ import com.marmelade.android.spacex.R
 
 /**
  * ViewPager adapter for list of photos
+ *
+ * @author Petr Tykal <tykal.pete@gmail.com>
  */
 class DetailPhotosPagerAdapter(
         private val context: Context,

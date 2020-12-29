@@ -16,6 +16,9 @@ import com.marmelade.android.spacex.R
 import com.marmelade.android.spacex.data.entities.RocketFilter
 
 
+/**
+ * @author Petr Tykal <tykal.pete@gmail.com>
+ */
 class FilterBottomSheet() : BottomSheetDialogFragment() {
 
     private lateinit var filter: MutableLiveData<RocketFilter>

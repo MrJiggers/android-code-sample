@@ -19,6 +19,9 @@ import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
 
 
+/**
+ * @author Petr Tykal <tykal.pete@gmail.com>
+ */
 @Module
 class AppModule(private val application: Application) {
 
@@ -29,19 +32,19 @@ class AppModule(private val application: Application) {
     @Provides
     @Singleton
     internal fun provideSpaceXRepository(
-        appContext: Context,
-        webApi: WebApi,
-        spaceXDatabase: SpaceXDatabase,
-        retrofit: Retrofit
+            appContext: Context,
+            webApi: WebApi,
+            spaceXDatabase: SpaceXDatabase,
+            retrofit: Retrofit
     ): SpaceXRepository = SpaceXRepository(appContext, webApi, spaceXDatabase, retrofit)
 
     @Provides
     @Singleton
     internal fun provideRoomDatabase(): SpaceXDatabase {
         return Room.databaseBuilder(
-            application,
-            SpaceXDatabase::class.java,
-            "${BuildConfig.APPLICATION_ID}_database"
+                application,
+                SpaceXDatabase::class.java,
+                "${BuildConfig.APPLICATION_ID}_database"
         ).build()
     }
 }
@@ -68,25 +71,25 @@ class RestModule {
 
         builder.addInterceptor { chain ->
             chain.proceed(
-                chain.request()
-                    .newBuilder()
-                    .addHeader(HEADER_CONTENT_TYPE, HEADER_CONTENT_TYPE_VALUE)
-                    .addHeader(HEADER_ACCEPT, HEADER_ACCEPT_VALUE)
-                    .build()
+                    chain.request()
+                            .newBuilder()
+                            .addHeader(HEADER_CONTENT_TYPE, HEADER_CONTENT_TYPE_VALUE)
+                            .addHeader(HEADER_ACCEPT, HEADER_ACCEPT_VALUE)
+                            .build()
             )
         }
         return builder.readTimeout(READ_TIMEOUT, TimeUnit.SECONDS)
-            .build()
+                .build()
     }
 
     @Provides
     internal fun provideRetrofit(okHttpClient: OkHttpClient, moshi: Moshi): Retrofit {
         return Retrofit.Builder()
-            .addConverterFactory(MoshiConverterFactory.create(moshi))
-            .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-            .baseUrl(BuildConfig.API_BASE_URL)
-            .client(okHttpClient)
-            .build()
+                .addConverterFactory(MoshiConverterFactory.create(moshi))
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .baseUrl(BuildConfig.API_BASE_URL)
+                .client(okHttpClient)
+                .build()
     }
 
     @Provides

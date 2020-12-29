@@ -14,6 +14,8 @@ import javax.inject.Inject
 
 /**
  * Base parent for fragments
+ *
+ * @author Petr Tykal <tykal.pete@gmail.com>
  */
 abstract class BaseFragment<V, T> : DaggerFragment() where V : ViewModel, T : ViewBinding {
 

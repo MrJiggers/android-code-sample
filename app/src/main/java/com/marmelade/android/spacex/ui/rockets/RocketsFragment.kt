@@ -30,6 +30,8 @@ import com.marmelade.android.spacex.ui.main.bottom_sheets.FilterBottomSheet
 
 /**
  * Fragment for list of rockets
+ *
+ * @author Petr Tykal <tykal.pete@gmail.com>
  */
 class RocketsFragment : BaseFragment<RocketsViewModel, FragmentRocketsBinding>() {
     companion object {
@@ -146,10 +148,8 @@ class RocketsFragment : BaseFragment<RocketsViewModel, FragmentRocketsBinding>()
                 }
             }) {
 
-        private lateinit var binding: RowRocketBinding
-
         override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
-            binding = RowRocketBinding.inflate(layoutInflater, parent, false)
+            val binding = RowRocketBinding.inflate(layoutInflater, parent, false)
             return RocketViewHolder(binding)
         }
 

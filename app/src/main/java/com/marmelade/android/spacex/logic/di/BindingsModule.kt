@@ -10,6 +10,9 @@ import dagger.Module
 import dagger.multibindings.IntoMap
 
 
+/**
+ * @author Petr Tykal <tykal.pete@gmail.com>
+ */
 @Module
 abstract class MainModule {
     @Binds

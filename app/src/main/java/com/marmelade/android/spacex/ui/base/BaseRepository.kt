@@ -20,6 +20,8 @@ import java.util.concurrent.TimeoutException
 
 /**
  * Base parent for repositories
+ *
+ * @author Petr Tykal <tykal.pete@gmail.com>
  */
 abstract class BaseRepository(
         private val appContext: Context,

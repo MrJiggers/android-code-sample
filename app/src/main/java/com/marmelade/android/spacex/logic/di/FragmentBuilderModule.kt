@@ -7,6 +7,9 @@ import dagger.Module
 import dagger.android.ContributesAndroidInjector
 
 
+/**
+ * @author Petr Tykal <tykal.pete@gmail.com>
+ */
 @Module
 abstract class FragmentBuilderModule {
 

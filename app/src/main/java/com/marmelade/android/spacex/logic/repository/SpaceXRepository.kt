@@ -19,6 +19,9 @@ import javax.inject.Inject
 import javax.inject.Singleton
 
 
+/**
+ * @author Petr Tykal <tykal.pete@gmail.com>
+ */
 @Singleton
 class SpaceXRepository @Inject internal constructor(
         appContext: Context,

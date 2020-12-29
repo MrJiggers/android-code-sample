@@ -4,6 +4,9 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MediatorLiveData
 
 
+/**
+ * @author Petr Tykal <tykal.pete@gmail.com>
+ */
 fun <A, B> combineLatestLiveData(a: LiveData<A>, b: LiveData<B>): LiveData<Pair<A, B>> {
     return MediatorLiveData<Pair<A, B>>().apply {
         var lastA: A? = null

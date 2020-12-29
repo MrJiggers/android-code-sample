@@ -11,9 +11,13 @@ import timber.log.Timber
 import javax.inject.Inject
 
 
+/**
+ * @author Petr Tykal <tykal.pete@gmail.com>
+ */
 open class SpaceXApplication : Application(), HasAndroidInjector {
 
-    @Inject lateinit var androidInjector: DispatchingAndroidInjector<Any>
+    @Inject
+    lateinit var androidInjector: DispatchingAndroidInjector<Any>
     lateinit var appComponent: AppComponent
 
     override fun onCreate() {
@@ -22,7 +26,7 @@ open class SpaceXApplication : Application(), HasAndroidInjector {
         if (BuildConfig.DEBUG) {
             Timber.plant(object : Timber.DebugTree() {
                 override fun createStackElementTag(element: StackTraceElement): String {
-                    return super.createStackElementTag(element) + ":" + element.lineNumber
+                    return "${super.createStackElementTag(element)}:${element.lineNumber}"
                 }
             })
         }

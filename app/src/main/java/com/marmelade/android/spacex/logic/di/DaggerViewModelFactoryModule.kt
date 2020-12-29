@@ -5,6 +5,9 @@ import dagger.Binds
 import dagger.Module
 
 
+/**
+ * @author Petr Tykal <tykal.pete@gmail.com>
+ */
 @Module
 abstract class DaggerViewModelFactoryModule {
     @Binds
